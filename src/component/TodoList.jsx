@@ -1,14 +1,14 @@
 import React from "react";
-import TodoForm from "./TodoForm";
-import TodoList from "./TodoList";
+import Todos from "./todolist/Todos";
 import * as St from "../styled-component/StLayout";
-function Layout() {
+import TodoForm from "./todolist/TodoForm";
+function TodoList() {
   return (
     <St.Layout>
       <TodoForm />
-      <TodoList />
+      <Todos />
     </St.Layout>
   );
 }
 
-export default Layout;
+export default TodoList;

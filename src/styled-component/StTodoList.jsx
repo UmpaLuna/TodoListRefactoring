@@ -22,6 +22,7 @@ export const Div = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  gap: 20px;
 `;
 const Button = styled.div`
   width: 100px;

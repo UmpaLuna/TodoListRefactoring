@@ -1,6 +1,6 @@
-import * as St from "../styled-component/StTodoForm";
-import useInput from "../hook/useInput";
-function TodoFormComponent() {
+import * as St from "../../styled-component/StTodoForm";
+import useInput from "../../hook/useInput";
+function TodoForm() {
   const { onClickAddTodoHandler, onChangeHandler } = useInput();
 
   return (
@@ -17,4 +17,4 @@ function TodoFormComponent() {
   );
 }
 
-export default TodoFormComponent;
+export default TodoForm;
