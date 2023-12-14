@@ -6,7 +6,7 @@ function useTodo() {
   const dispatch = useDispatch();
   const onClickIsDoneHandler = (id) => () => dispatch(isDoneTodo(id));
   const onClickDeleteHandler = (id) => () => dispatch(deleteTodo(id));
-  // jotai 디라이브드 같아보임 괜춘함
+  // jotai 디라이브드 같아보임 괜춘함- 류제천 튜터님말씀
   const currentTodoList = todoList?.filter((todo) => !todo.isDone);
   const doneList = todoList?.filter((todo) => todo.isDone);
 
