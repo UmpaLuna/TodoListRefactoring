@@ -13,13 +13,14 @@ const todoList = createSlice({
     isDoneTodo: (state, { payload }) => {
       const newTodoList = state.map((target) => {
         if (target.id === payload) {
-          target.isDone = !target.isDone;
-          return target;
+          // target.isDone = !target.isDone;
+          return { ...target, isDone: !target.isDone };
         }
         return target;
       });
-      // 물어보자
-      state = newTodoList;
+      // // 물어보자
+      // state = newTodoList;
+      return newTodoList;
     },
 
     deleteTodo: (state, { payload }) => {

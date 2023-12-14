@@ -1,26 +1,15 @@
-import { useDispatch } from "react-redux";
 import * as St from "../styled-component/StTodoForm";
-import { useRef } from "react";
-import { addTodo } from "../store/modules/todoList";
+import useInput from "../hook/useInput";
 function TodoFormComponent() {
-  const dispatch = useDispatch();
-  const inputRef = useRef({});
-  const onClickAddTodoHandler = () => {
-    const newTodo = {
-      id: Date.now(),
-      title: inputRef.title.value,
-      content: inputRef.content.value,
-      isDone: false,
-    };
-    dispatch(addTodo(newTodo));
-  };
+  const { onClickAddTodoHandler, onChangeHandler } = useInput();
+
   return (
     <St.Form onSubmit={(e) => e.preventDefault()}>
       <St.Div>
         <St.Label htmlFor="todo">할 일 :</St.Label>{" "}
-        <St.Input id="todo" ref={(props) => (inputRef["title"] = props)} />
+        <St.Input id="todo" name="todo" onChange={onChangeHandler} />
         <St.Label htmlFor="content">내용 : </St.Label>{" "}
-        <St.Input id="content" ref={(props) => (inputRef["content"] = props)} />
+        <St.Input id="content" name="content" onChange={onChangeHandler} />
       </St.Div>
 
       <St.Button onClick={onClickAddTodoHandler}>버튼</St.Button>
