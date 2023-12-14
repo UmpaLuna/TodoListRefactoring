@@ -1,6 +1,5 @@
 import React from "react";
 import useTodo from "../../hook/useTodo";
-import * as St from "../../styled-component/StTodoList";
 import TodoCard from "./TodoCard";
 function CompleteTodos() {
   const { doneList } = useTodo();
