@@ -1,7 +1,7 @@
 import React from "react";
-import Todos from "./todolist/Todos";
+import Todos from "./todos/Todos";
 import * as St from "../styled-component/StLayout";
-import TodoForm from "./todolist/TodoForm";
+import TodoForm from "./todos/TodoForm";
 function TodoList() {
   return (
     <St.Layout>
